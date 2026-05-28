@@ -335,7 +335,7 @@
           <div class="elegant-card" @click="router.push('/peripheral')">
             <div class="elegant-image">
               <div class="image-frame">
-                <img src="https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg" alt="湘绣丝巾" loading="lazy">
+                <img src="/static/pictures/丝巾.jpg" alt="湘绣丝巾" loading="lazy">
               </div>
               <div class="hover-overlay">
                 <span class="view-detail">查看细节</span>
@@ -351,7 +351,7 @@
           <div class="elegant-card" @click="router.push('/peripheral')">  
             <div class="elegant-image">
               <div class="image-frame">
-                <img src="https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg" alt="湘绣书签" loading="lazy">
+                <img src="/static/pictures/书签.jpg" alt="湘绣书签" loading="lazy">
               </div>
               <div class="hover-overlay">
                 <span class="view-detail">查看细节</span>
@@ -367,7 +367,7 @@
           <div class="elegant-card" @click="router.push('/peripheral')">
             <div class="elegant-image">
               <div class="image-frame">
-                <img src="https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg" alt="湘绣抱枕" loading="lazy">
+                <img src="/static/pictures/抱枕.jpg" alt="湘绣抱枕" loading="lazy">
               </div>
               <div class="hover-overlay">
                 <span class="view-detail">查看细节</span>

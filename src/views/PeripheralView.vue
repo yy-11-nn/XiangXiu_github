@@ -87,7 +87,7 @@ const products = ref([
     name: '湘绣丝巾',
     description: '采用优质桑蚕丝，手工绣制的精美丝巾',
     price: 398,
-    image: 'https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg',
+    image: '/static/pictures/丝巾.jpg',
     categoryId: 1 // 服饰配饰
   },
   {
@@ -95,7 +95,7 @@ const products = ref([
     name: '湘绣笔记本',
     description: '封面采用湘绣工艺，内页优质纸张',
     price: 158,
-    image: 'https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg',
+    image: '/static/pictures/笔记本.jpg',
     categoryId: 2 // 文具用品
   },
   {
@@ -103,7 +103,7 @@ const products = ref([
     name: '湘绣书签套装',
     description: '精美湘绣书签，一套四枚',
     price: 88,
-    image: 'https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg',
+    image: '/static/pictures/书签.jpg',
     categoryId: 2 // 文具用品
   },
   {
@@ -111,7 +111,7 @@ const products = ref([
     name: '湘绣抱枕',
     description: '舒适面料，精致湘绣图案',
     price: 268,
-    image: 'https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg',
+    image: '/static/pictures/抱枕.jpg',
     categoryId: 3 // 家居装饰
   },
   {
@@ -119,7 +119,7 @@ const products = ref([
     name: '湘绣手机壳',
     description: '时尚手机壳，点缀湘绣元素',
     price: 128,
-    image: 'https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg',
+    image: '/static/pictures/手机壳.jpg',
     categoryId: 4 // 数码配件
   },
   {
@@ -127,7 +127,7 @@ const products = ref([
     name: '湘绣装饰画',
     description: '小型湘绣装饰画，适合家居装饰',
     price: 598,
-    image: 'https://pic1.imgdb.cn/item/67fe2d5688c538a9b5d1b561.jpg',
+    image: '/static/pictures/装饰画.jpg',
     categoryId: 3 // 家居装饰
   }
 ])
