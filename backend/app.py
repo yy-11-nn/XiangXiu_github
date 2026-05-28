@@ -1,4 +1,3 @@
-# Python 3.10+ 兼容性修复 - 解决 collections.MutableSet 已移除问题
 import sys
 if sys.version_info >= (3, 10):
     import collections.abc
@@ -240,21 +239,27 @@ def register():
 
 @app.route('/api/login', methods=['POST'])
 def login():
-    data = request.get_json()
-    
-    # 验证数据
-    if not data.get('username') or not data.get('password'):
-        return jsonify({'message': '缺少必要参数'}), 400
-    
-    # 查找用户
-    user = User.query.filter_by(username=data['username']).first()
-    
-    # 验证用户和密码
-    if not user or user.password != hash_password(data['password']):
-        return jsonify({'message': '用户名或密码错误'}), 401
-    
-    # 返回登录成功信息，包括用户ID和是否为管理员
-    return jsonify({'message': '登录成功', 'user_id': user.id, 'is_admin': user.is_admin}), 200
+    try:
+        data = request.get_json()
+        
+        # 验证数据
+        if not data or not data.get('username') or not data.get('password'):
+            return jsonify({'message': '缺少必要参数'}), 400
+        
+        # 查找用户
+        user = User.query.filter_by(username=data['username']).first()
+        
+        # 验证用户和密码
+        if not user or user.password != hash_password(data['password']):
+            return jsonify({'message': '用户名或密码错误'}), 401
+        
+        # 返回登录成功信息，包括用户ID和是否为管理员
+        return jsonify({'message': '登录成功', 'user_id': user.id, 'is_admin': user.is_admin}), 200
+    except Exception as e:
+        print(f"[错误] 登录接口异常: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({'message': f'服务器内部错误: {str(e)}'}), 500
 
 @app.route('/api/users', methods=['GET'])
 def get_users():

@@ -53,8 +53,8 @@
 import { ref, nextTick, onMounted } from 'vue'
 import axios from 'axios'
 
-// API基础URL - 本地开发使用 localhost，生产环境使用服务器地址
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+// API基础URL - 使用相对路径，让 Nginx 代理处理
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || ''
 
 // 跳转到ChatBot页面
 const goToChatBot = () => {
