@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // 将/api开头的请求代理到后端服务
       '/api': {
-        target: 'http://159.75.35.186:5000',
+        target: 'http://localhost:5000',
         changeOrigin: true
       }
     }
